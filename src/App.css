@@ -1,38 +1,119 @@
-.App {
+
+*,*::before, *::after{
+  box-sizing: border-box !important;
+}
+
+.right-icons button{
+  font-size: 1.3rem;
+  background-color: transparent;
+  border:none;
+  margin-left: 0.9rem;
+}
+.sideNav-Item {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  padding-left: 2rem;
+  color: #333;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.sideNav-Item.vertical{
+  display: block;
+  padding: 0;
+}
+
+.sideNav-Item > div {
+  display: flex;
+  align-items: center;
+}
+
+.sideNav-Item.vertical > div  {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sideNav-Item svg {
+  font-size: 1.3rem; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sideNav-Item.vertical svg {
+  margin: 0!important;
+  font-size: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sideNav-Item.vertical span{
+  font-size: .7rem;
 }
 
-.App-link {
-  color: #61dafb;
+.sideNav-Item svg, .sideNav-Item img {
+  margin-right: 1.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sideNav-Item img{
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.category-nav{
+  background-color: #fff; 
+  padding: 0.7rem 0; 
+  border-top: 1px solid #ccc; 
+  border-bottom: 1px solid #ccc; 
+  width: 100%;
+}
+
+.category-nav ul{
+  display: flex; 
+  list-style: none; 
+  margin: 0;
+}
+
+.category-nav ul > li{
+  border-radius: 16px;
+  height: 32px;
+  background-color: #eee;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid #ccc;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.category-nav ul > li:hover{
+  background-color: #ddd;
+}
+
+.category-nav ul > li.active{
+  background-color: #030303;
+}
+
+.category-nav ul > li.active >a{
+  color:#fff
+}
+
+
+.category-nav ul > li > a{
+  text-decoration: none; 
+  color: #333;
+}
+
+.video-card .details>span:first-child::after{
+  content: "•";
+  margin: 0 4px;
+}
+
+.video-list{
+  display:flex;
+  flex-wrap: wrap;
+  padding: 1rem 4rem;
+}
+
+.video-list>div{
+  padding: 0 0.5rem;
+  margin-bottom: 3rem;
 }
